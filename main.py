@@ -1,7 +1,7 @@
 import pyfiglet
-import argparse
 import progressBar
 import time
+import image_steno
 
 def banner():
     """
