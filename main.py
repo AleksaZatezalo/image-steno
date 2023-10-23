@@ -1,4 +1,3 @@
-from PIL import Image
 import pyfiglet
 import argparse
 import progressBar

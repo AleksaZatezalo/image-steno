@@ -7,4 +7,4 @@ Stenography is a method of hiding secret data in images, audio, or video. When p
 The idea behind image stenography is very simple. Images are composed of digital data (pixels), which describes what’s inside the picture, usually the colors of all the pixels. Select pixels are altered to represent characters in an encoded message. 
 
 # Project Structure
-This project contains three files critical files: main.py, image-steno.py, and progressBar.py.  The main.py file combines and exacutes image-steno.py & progressBar.py in one file. The image-steno.py file performs the stenogrphy while progressBar.py adds visual flair.  
+This project contains three files critical files: main.py, image-steno.py, and progressBar.py.  The main.py file combines and exacutes image-steno.py & progressBar.py in one file. The image-steno.py file performs the stenogrphy while progressBar.py adds visual flair.
