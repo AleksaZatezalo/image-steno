@@ -14,11 +14,12 @@ def banner():
 
 
 if __name__ == "__main__":
+    banner()
     parser = optparse.OptionParser("usage %python main.py -s <souce file> -t <text to hide> -d <destination image> -e <encrypt>")
     parser.add_option('-s', dest='source', type='string',help='The source image to steno.')
     parser.add_option('-t', dest='text', type='string',help='The text to hide')
     parser.add_option('-d', dest='dest', type='string',help='The destination image within which to hide text.')
-    parser.add_option('-e', dest='encrypt', type='Bool',help='Set to true if hiding data, otherwise omit.')
+    parser.add_option('-e', dest='encrypt', type='string',help='Set to true if hiding data, otherwise omit.')
     
     (options, args) = parser.parse_args()
     if options.interface == None:
