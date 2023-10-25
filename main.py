@@ -12,20 +12,25 @@ root.resizable(False,False)
 root.configure(bg="#2f4155")
 
 def showimage():
-    filename = filedialog.askopenfile(initialdir=os.getcwd(), title='Select Image File', filetype=(("PNG file", "*.png"), ("JPG file", "*.jpg"), ("All File", ".txt")))
-    img = Image.open(filename, errors='ignore')
+    global filename
+    filename = filedialog.askopenfile(initialdir=os.getcwd(), title='Select Image File')
+    img = Image.open(filename.name)
     img = ImageTk.PhotoImage(img)
     lbl.configure(image=img, width=250, height=250)
     lbl.image=img
-
+    
 def Hide():
-    print("")
+    global secret
+    message = text1.get(1.0, END)
+    secret = lsb.hide(str(filename.name), message)
 
 def Show():
-    print("")
+    clear_message = lsb.reveal(filename.name)
+    text1.delete(1.0, END)
+    text1.insert(END, clear_message)
 
 def save():
-    print("")
+    secret.save("hidden.jpg")
 
 Label(root, text="CYBER SCIENCE", bg="#2d4155", fg="white", font="arial 25 bold").place(x=100, y=20)
 
